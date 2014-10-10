@@ -7,7 +7,7 @@ import android.hardware.Camera;
  */
 public class OneShotFaceDetectionListener implements Camera.FaceDetectionListener {
 
-    private static final int UPDATE_SPEED = 100;
+    private static final int UPDATE_SPEED = 250;
     private static final int UPDATE_SPEED_UNITS = 1000;
 
     private final Listener listener;
