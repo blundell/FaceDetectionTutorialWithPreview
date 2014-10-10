@@ -17,11 +17,14 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
         super(context);
         this.camera = camera;
         this.listener = listener;
+        // Listen for when the surface is ready to be drawn on
         this.getHolder().addCallback(this);
     }
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
+        // When the surface is ready to be drawn on
+        // tell our camera to use this to show a preview
         camera.initialise(listener, holder);
     }
 
@@ -30,6 +33,7 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
         if (surfaceDoesNotExist()) {
             return;
         }
+        // When the surface changes we need to re-attach it to our camera
         camera.initialise(listener, holder);
     }
 
@@ -40,5 +44,6 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
     @Override
     public void surfaceDestroyed(SurfaceHolder holder) {
         // empty. Take care of releasing the Camera preview in your activity.
+        // (done in FrontCameraRetriever for us)
     }
 }

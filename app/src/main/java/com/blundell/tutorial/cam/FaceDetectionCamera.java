@@ -20,15 +20,6 @@ public class FaceDetectionCamera implements OneShotFaceDetectionListener.Listene
     }
 
     /**
-     * Use this to detect faces without an on screen preview
-     *
-     * @param listener the {@link FaceDetectionCamera.Listener} for when faces are detected
-     */
-    public void initialise(Listener listener) {
-        initialise(listener, new DummySurfaceHolder());
-    }
-
-    /**
      * Use this to detect faces when you have a custom surface to display upon
      *
      * @param listener the {@link com.blundell.tutorial.cam.FaceDetectionCamera.Listener} for when faces are detected

@@ -37,8 +37,9 @@ public class MainActivity extends Activity implements FrontCameraRetriever.Liste
     @Override
     public void onLoaded(FaceDetectionCamera camera) {
         // When the front facing camera has been retrieved we still need to ensure our display is ready
-        // so we will initialise inside the camera preview i.e turn face detection on
+        // so we will let the camera surface view initialise the camera i.e turn face detection on
         SurfaceView cameraSurface = new CameraSurfaceView(this, camera, this);
+        // Add the surface view (i.e. camera preview to our layout)
         ((FrameLayout) findViewById(R.id.helloWorldCameraPreview)).addView(cameraSurface);
     }
 

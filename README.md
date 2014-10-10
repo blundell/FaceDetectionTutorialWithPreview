@@ -7,23 +7,28 @@ Load your front facing camera like this
 
 `FrontCameraRetriever.retrieveFor(context);`
 
+Add a preview to your activity layout
+
+```java
+SurfaceView cameraSurface = new CameraSurfaceView(context, camera, this);
+((FrameLayout) findViewById(R.id.helloWorldCameraPreview)).addView(cameraSurface);
+```
+
 Listen for face detection like this
 
 ```java
-camera.initialise(new FaceDetectionCamera.Listener() {
-       @Override
-       public void onFaceDetected() {
-           
-       }
+@Override
+public void onFaceDetected() {
+   
+}
 
-       @Override
-       public void onFaceTimedOut() {
+@Override
+public void onFaceTimedOut() {
 
-       }
+}
 
-       @Override
-       public void onFaceDetectionNonRecoverableError() {
+@Override
+public void onFaceDetectionNonRecoverableError() {
 
-       }
-   });
+}
 ```
