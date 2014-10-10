@@ -1,7 +1,7 @@
 FaceDetectionTutorial
 =====================
 
-Explantory tutorial can be found here: http://blog.blundell-apps.com/tut-front-camera-face-detection-explained/
+Explanatory tutorial can be found here: http://blog.blundell-apps.com/tut-front-camera-face-detection-with-preview/
 
 Load your front facing camera like this
 
